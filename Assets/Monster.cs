@@ -5,9 +5,11 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
 
+    private float startSpeed;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Archer" || collision.gameObject.tag == "Warrior")
         {
 
             Rigidbody rb = collision.rigidbody;
@@ -17,16 +19,12 @@ public class Monster : MonoBehaviour
                 Enemy e = rb.GetComponent<Enemy>();
                 if (e != null)
                 {
-                    //rb.AddForce(Vector3.right * 12);
-                    //collision.transform;
-                    Instantiate(GameManager.Instance.particuleDeath, collision.transform.position + Vector3.up *0.2f, Quaternion.identity, transform);
+                    Instantiate(GameManager.Instance.particuleDeath, collision.transform.position + Vector3.up *0.4f, Quaternion.identity, transform);
                     e.Die();
                 }
             }
-        }       
+        }
     }
-
-    private float startSpeed;
 
     private void Start()
     {

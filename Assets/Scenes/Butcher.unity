@@ -784,7 +784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee24b3c9d38ef34e9576cbb83d56227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 8298696650385673626, guid: 3a144ee2ea3e75e4597ebac9dde8e1d3, type: 3}
+  enemies:
+  - {fileID: 8298696650385673626, guid: 3a144ee2ea3e75e4597ebac9dde8e1d3, type: 3}
+  - {fileID: 7984567712568085435, guid: dd52f7623f38ded4182b6ffa925e787c, type: 3}
   spawnerTop: {fileID: 1746838866}
   spawnerMiddle: {fileID: 1215383032}
   spawnerDown: {fileID: 699929498}
@@ -1445,6 +1447,36 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &679581982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 679581983}
+  m_Layer: 0
+  m_Name: CACAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &679581983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679581982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 727913172}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &699929498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1517,6 @@ GameObject:
   m_Component:
   - component: {fileID: 727913172}
   - component: {fileID: 727913173}
-  - component: {fileID: 727913175}
   - component: {fileID: 727913174}
   - component: {fileID: 727913176}
   m_Layer: 0
@@ -1513,6 +1544,7 @@ Transform:
   - {fileID: 1037282146}
   - {fileID: 142509181}
   - {fileID: 1072667959}
+  - {fileID: 679581983}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1547,19 +1579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdcf5b9c590d674ab258f125cd6b519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &727913175
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727913171}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 4.44, z: 1}
-  m_Center: {x: 0.94, y: 0, z: 0}
 --- !u!54 &727913176
 Rigidbody:
   m_ObjectHideFlags: 0

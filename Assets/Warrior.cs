@@ -5,17 +5,15 @@ using UnityEngine;
 
 public class Warrior : Enemy
 {
-    private float timerShoot = 0f;
-    public float shootCooldown = 2f;
     public float damage = 10;
     public float damagePerSecond = 1;
 
-    public float speedMultiplicator = 5f;
+    public float speedMultiplicator = 6f;
 
     private void Start()
     {
         GetComponent<Animator>().SetTrigger("Walk");
-        Invoke("StopAnimation", 2f);
+        Invoke("StopAnimation", 6f);
     }
 
     private void StopAnimation()
@@ -24,20 +22,10 @@ public class Warrior : Enemy
         speedMultiplicator = 1f;
     }
 
-    //protected override void Update()
-    //{
-    //    base.Update();
+    protected override void Update()
+    {
+        base.Update();
 
-    //    timerShoot += Time.deltaTime;
-    //    if (timerShoot > shootCooldown)
-    //    {
-    //        timerShoot = 0f;
-    //        GameObject p = Instantiate(projectile, projectileSpawner.transform);
-
-    //        p.transform.DOMove(target.transform.position, GameManager.Instance.projectileTravelTime).OnComplete(() => Destroy(p));
-
-    //        target.GetDamage(damage, damagePerSecond, GameManager.Instance.projectileTravelTime);
-    //    }
-    //    transform.Translate(Vector3.right * GameManager.Instance.environmentSpeed * speedMultiplicator * Time.deltaTime);
-    //}
+        transform.Translate(Vector3.right * GameManager.Instance.environmentSpeed * speedMultiplicator * Time.deltaTime);
+    }
 }

@@ -6,7 +6,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Part target;
-    
 
     public bool dead = false;
 
@@ -14,7 +13,6 @@ public class Enemy : MonoBehaviour
     {
         if (dead)
         {
-            //death anim
             Destroy(gameObject);
             return;
         }
@@ -23,6 +21,5 @@ public class Enemy : MonoBehaviour
     public virtual void Die()
     {
         dead = true;
-        //particule boom
     }
 }

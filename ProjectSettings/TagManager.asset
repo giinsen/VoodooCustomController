@@ -7,6 +7,9 @@ TagManager:
   - Part
   - House
   - Enemy
+  - FxTemporaire
+  - Archer
+  - Warrior
   layers:
   - Default
   - TransparentFX
